@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "lampung-kode",
+    "slug": "lampung-kode",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "lampung-kode"
+}
