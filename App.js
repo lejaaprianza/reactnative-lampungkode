@@ -4,29 +4,19 @@ import { StyleSheet, Text, View } from "react-native";
 
 export default function App() {
   return (
-    <View style={styles.container}>
+    <SaveAreaView>
       <Text
         style={{
           fontWeight: "bold",
-          fontStyle: "normal",
-          textAlign: "right",
+          fontStyle: "italic",
           letterSpacing: 5,
           color: "orange",
-          fontSize: 28,
+          fontSize: 25,
         }}
       >
         Hello World
       </Text>
       <StatusBar style="auto" />
-    </View>
+    </SaveAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
