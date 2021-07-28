@@ -117,7 +117,7 @@ const App = () => {
             alignItems: "center",
           }}
         >
-          <Text>Contoh 7</Text>
+          <Text>Contoh 7 </Text>
         </View>
         <View
           style={{
@@ -128,7 +128,7 @@ const App = () => {
             alignItems: "center",
           }}
         >
-          <Text>Contoh 7</Text>
+          <Text>Contoh 7 - copy</Text>
         </View>
         <View
           style={{
@@ -139,7 +139,7 @@ const App = () => {
             alignItems: "center",
           }}
         >
-          <Text>Contoh 7</Text>
+          <Text>Contoh 7 - copy</Text>
         </View>
 
         <View
