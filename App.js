@@ -1,45 +1,71 @@
 import React from "react"
-import { Text, View, StyleSheet } from "react-native"
+import {
+  Text,
+  View,
+  StyleSheet,
+  TouchableOpacity,
+  ScrollView,
+} from "react-native"
 
 const App = () => {
+  state = {
+    Regions: [
+      {
+        id: 0,
+        Region: "Bandar Lampung",
+      },
+      {
+        id: 1,
+        Region: "Bandung",
+      },
+      {
+        id: 2,
+        Region: "Bogor",
+      },
+      {
+        id: 3,
+        Region: "Majalengka",
+      },
+      {
+        id: 4,
+        Region: "Cipinang",
+      },
+    ],
+  }
+  const alertItemRegion = (item) => {
+    alert(item.Region)
+  }
+
   return (
-    <View style={gaya.State1}>
-      <View style={gaya.State2}>
-        <Text>1</Text>
-        <Text>2</Text>
-        <Text>3</Text>
-        <Text>4</Text>
-        <Text>5</Text>
-      </View>
-      <View style={gaya.State3}>
-        <Text>Contoh 2</Text>
-      </View>
+    <View style={styles.State1}>
+      <ScrollView>
+        {state.Regions.map((item, index) => (
+          <TouchableOpacity
+            key={item.id}
+            style={styles.container}
+            onPress={() => alertItemRegion(item)}
+          >
+            <Text style={styles.text}>{item.Region}</Text>
+          </TouchableOpacity>
+        ))}
+      </ScrollView>
     </View>
   )
 }
 
 export default App
 
-const gaya = StyleSheet.create({
-  State1: {
-    flex: 1,
-  },
-  State2: {
-    flexDirection: "column",
-    flex: 0.3,
-    backgroundColor: "pink",
-    margin: 20,
-    justifyContent: "center",
+const styles = StyleSheet.create({
+  container: {
+    padding: 10,
+    marginTop: 3,
+    height: 200,
+    backgroundColor: "grey",
     alignItems: "center",
+    alignItems: "center",
+    justifyContent: "center",
   },
-  State3: {
-    flex: 0.3,
-    backgroundColor: "red",
-    marginHorizontal: 20,
-    marginVertical: 20,
-    paddingHorizontal: 20,
-    paddingVertical: 20,
-    justifyContent: "flex-end",
-    alignItems: "flex-end",
+  text: {
+    color: "yellow",
   },
 })
