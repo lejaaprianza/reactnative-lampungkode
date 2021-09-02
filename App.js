@@ -1,37 +1,39 @@
 import React from "react"
-import { View, Image, Text } from "react-native"
+import {
+  Button,
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  Alert,
+} from "react-native"
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: "center",
+  },
+  text: {
+    padding: 25,
+    color: "white",
+    backgroundColor: "green",
+  },
+})
 
 const App = () => {
   return (
-    <View>
-      <View
-        style={{
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
-        <Text>Ini Gambar dari folder images</Text>
-        <Image
-          source={require("./images/react-native-logo.png")}
-          style={{
-            width: 260,
-            height: 300,
-          }}
-        />
-        <View style={{ height: 50 }} />
-        <Text>Ini Gambar dari URI</Text>
-        <Image
-          source={{
-            uri: "https://lampungkode.id/wp-content/uploads/2021/07/lampung-kode-1.png",
-          }}
-          style={{
-            width: 260,
-            height: 50,
-          }}
-        />
+    <>
+      <Button
+        onPress={() => Alert.alert("Contoh Button 1")}
+        title="Contoh Button 1"
+        color="blue"
+      />
+      <View style={{ height: 80 }} />
+      <View style={styles.container}>
+        <TouchableOpacity onPress={() => Alert.alert("Contoh Button 2")}>
+          <Text style={styles.text}>Contoh Button 2</Text>
+        </TouchableOpacity>
       </View>
-    </View>
+    </>
   )
 }
-
 export default App
